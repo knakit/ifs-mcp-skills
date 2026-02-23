@@ -19,15 +19,15 @@ Skills are the most valuable contribution you can make. Every skill you share sa
 - **Generic** — no real order numbers, customer IDs, or company-specific data. Use placeholders like `CUST-001`, `ORDER-10001`
 - **Tested** — you've actually used it to query your IFS instance
 
-See [SKILL_AUTHORING_GUIDE.md](SKILL_AUTHORING_GUIDE.md) for the full process of building a skill from scratch.
+Look at the existing skills in `skills/` as a reference for structure and style.
 
 ### How to submit a skill
 
 1. **Fork this repository** on GitHub
 
-2. **Build your skill** using the `build_ifs_guide` prompt in Claude Desktop, or write it manually following the conventions in existing skills in `src/resources/`
+2. **Build your skill** using the `build_ifs_guide` prompt in Claude Desktop, or write it manually following the conventions in existing skills in `skills/`
 
-3. **Place your skill file** in `src/resources/` using the naming convention:
+3. **Place your skill file** in `skills/` using the naming convention:
    ```
    ifs-[module]-[area].md
    ```
@@ -70,16 +70,11 @@ If you'd rather not go through the PR process, you can share your skill by:
 - Uploading the `.md` file to a GitHub Gist or any public URL
 - Posting the link in a GitHub Issue or Discussion
 
-Others can import it directly with:
-```
-import_skill({ source: "https://raw.githubusercontent.com/..." })
-```
-
 ---
 
 ## Reporting a Bug
 
-Open an issue at [GitHub Issues](https://github.com/knakit/ifs-mcp-server-local/issues) and include:
+Open an issue at [GitHub Issues](https://github.com/knakit/ifs-mcp/issues) and include:
 
 **For authentication issues:**
 - Your IFS Cloud version (if known)
@@ -109,40 +104,6 @@ Open an issue and label it **enhancement**. Describe:
 - Why the current behaviour doesn't work for your case
 
 No suggestion is too small. If something feels harder than it should be, it's worth raising.
-
----
-
-## Code Contributions
-
-For bug fixes or small improvements, open a PR with a clear description of what you changed and why.
-
-For larger changes (new tools, architectural changes), open an issue first to discuss the approach before writing code — this avoids wasted effort if the direction doesn't fit the project.
-
-### Setup
-
-```bash
-git clone https://github.com/knakit/ifs-mcp-server-local
-cd ifs-mcp-server-local
-npm install
-```
-
-Copy `.env.example` to `.env` and fill in your IFS credentials.
-
-### Build
-
-```bash
-# Windows
-npx tsc
-
-# macOS / Linux
-npm run build
-```
-
-### Before submitting a PR
-
-- [ ] `npx tsc` compiles without errors
-- [ ] Existing skills in `src/resources/` still load correctly
-- [ ] No secrets or credentials in any committed file
 
 ---
 
