@@ -1,6 +1,6 @@
 # IFS MCP Skills
 
-A community-maintained collection of skills for the [IFS MCP Server](https://github.com/knakit/ifs-mcp), enabling Claude to interact with IFS Cloud using plain business language.
+A community-maintained collection of skills for the [IFS MCP Server](https://github.com/knakit/ifs-mcp-server-local), enabling Claude to interact with IFS Cloud using plain business language.
 
 ---
 
@@ -103,7 +103,7 @@ Not ready for a PR? You can also share a Gist or link in the [Discussions](https
 
 ## Related
 
-- [IFS MCP Server](https://github.com/knakit/ifs-mcp) — the server that uses these skills
+- [IFS MCP Server](https://github.com/knakit/ifs-mcp-server-local) — the server that uses these skills
 
 ---
 
